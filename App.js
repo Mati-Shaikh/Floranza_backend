@@ -3,14 +3,16 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const perfumeRoutes = require("./routes/perfumeRoutes");
 const path = require("path");
+const cors = require("cors"); // Import CORS package
+
 const app = express();
 
 // Middleware
+app.use(cors()); // Enable CORS for all origins
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 console.log("Saving file to:", path.join(__dirname, "uploads"));
-
 
 // Default admin credentials
 const ADMIN_CREDENTIALS = { username: "admin", password: "admin" };
