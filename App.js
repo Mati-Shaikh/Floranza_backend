@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 app.use("/api", perfumeRoutes);
 
 // Database Connection
-mongoose.connect("mongodb://localhost:27017/perfumeStore", {
+mongoose.connect("mongodb+srv://mydb:mydb1234@cluster0.hnrty.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
