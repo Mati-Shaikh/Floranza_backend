@@ -15,7 +15,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 console.log("Saving file to:", path.join(__dirname, "uploads"));
 
 // Default admin credentials
-const ADMIN_CREDENTIALS = { username: "admin", password: "admin" };
+const ADMIN_CREDENTIALS = { username: "Floranza156", password: "Floranza156MM@" };
 app.use((req, res, next) => {
     req.adminPassword = ADMIN_CREDENTIALS.password;
     next();
